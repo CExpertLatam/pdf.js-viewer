@@ -13146,7 +13146,6 @@ var PDFViewerApplication = {
     title = url;
    }
   }
-  this.setTitle(title);
  },
  setTitle: function pdfViewSetTitle(title) {
   if (this.isViewerEmbedded) {
