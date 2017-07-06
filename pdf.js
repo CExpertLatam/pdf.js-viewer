@@ -12432,6 +12432,10 @@ var PDFLinkService = function PDFLinkServiceClosure() {
    this.pdfViewer.currentPageNumber = value;
   },
   navigateTo: function PDFLinkService_navigateTo(dest) {
+   // Doesn't execute the function if the destination doesn't have the parameters
+   if (dest.indexOf("?") < 0) {
+     return;
+   }
    var destString = '';
    var self = this;
    var goToDestination = function (destRef) {
